@@ -1,0 +1,8 @@
+C:\Users\Caglayan\source\repos\Questions\Questions\bin\Debug\Questions.exe.config
+C:\Users\Caglayan\source\repos\Questions\Questions\bin\Debug\Questions.exe
+C:\Users\Caglayan\source\repos\Questions\Questions\bin\Debug\Questions.pdb
+C:\Users\Caglayan\source\repos\Questions\Questions\obj\Debug\Questions.csproj.AssemblyReference.cache
+C:\Users\Caglayan\source\repos\Questions\Questions\obj\Debug\Questions.csproj.SuggestedBindingRedirects.cache
+C:\Users\Caglayan\source\repos\Questions\Questions\obj\Debug\Questions.csproj.CoreCompileInputs.cache
+C:\Users\Caglayan\source\repos\Questions\Questions\obj\Debug\Questions.exe
+C:\Users\Caglayan\source\repos\Questions\Questions\obj\Debug\Questions.pdb
