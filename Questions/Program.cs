@@ -6,11 +6,20 @@ using System.Threading.Tasks;
 
 namespace Questions
 {
+
     internal class Program
     {
+
+        public static Solutions solutions;
+
         static void Main(string[] args)
         {
-            Console.WriteLine(MonthName(2)); 
+            double[] array = { 5, 3, 2, 1, 7 };
+
+            foreach (var item in FindMinMax(array))
+            {
+                Console.WriteLine(item);
+            }
 
             Console.ReadLine();
         }
@@ -104,6 +113,51 @@ namespace Questions
 
         }
 
+        /// <summary>
+        /// Create a function that takes an array of numbers and return both the minimum and maximum numbers, in that order.
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public static double[] FindMinMax(double[] values)
+        {
+            switch (solutions)
+            {
+                case Solutions.Solution1:
+                {
+                        return new double[2] { values.Min(), values.Max() }; // return new[2]{ values.Min(), values.Max() } compiler changes new[] to new double[]
+                }
+
+                case Solutions.Solution2:
+                {
+                    double[] minMaxArray = new double[2];
+                    minMaxArray[0] = minMaxArray[1] = values[0];
+
+
+                    for (int i = 1; i < values.Length; i++)
+                    {
+                        if (minMaxArray[0] > values[i])
+                        {
+                            minMaxArray[0] = values[i];
+                        }
+
+                        if (minMaxArray[1] < values[i])
+                        {
+                            minMaxArray[1] = values[i];
+                        }
+                    }
+
+                    return minMaxArray;
+
+                }
+                        
+                default: 
+                    return null;
+            }
+
+        }
+
+
+
 
         #endregion
 
@@ -126,5 +180,15 @@ namespace Questions
         #region Expert
 
         #endregion
+    }
+
+
+    enum Solutions
+    {
+        Solution1 = 1,
+        Solution2 = 2,
+        Solution3 = 3,
+        Solution4 = 4,
+        Solution5 = 5
     }
 }
