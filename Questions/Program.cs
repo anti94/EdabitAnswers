@@ -14,15 +14,36 @@ namespace Questions
 
         static void Main(string[] args)
         {
+            // Enter solution number here
+            Console.Write("Enter the solution number starting from 1:");
+
+            //int solutionNumber = Int32.Parse(Console.ReadLine()); Eger input karakterse exception atar burası. Dolasyısıyla asagıdaki fonksiyonu kullanmak daha mantıklı.
+
+            Int32.TryParse(Console.ReadLine(), out int solutionNumber); // TrtyParse fonksiyonu asla exception atmaz. Out ile null dısında illa bir output döner.
+
+
+            solutions = (Solutions)solutionNumber;
+
+
+          
+
+
+            // Call the test function
             double[] array = { 5, 3, 2, 1, 7 };
 
+            // Show the outputs of the function
             foreach (var item in FindMinMax(array))
             {
                 Console.WriteLine(item);
             }
+            
 
+
+            // Stop the program
             Console.ReadLine();
         }
+
+
 
         #region Very Easy
 
@@ -120,6 +141,7 @@ namespace Questions
         /// <returns></returns>
         public static double[] FindMinMax(double[] values)
         {
+
             switch (solutions)
             {
                 case Solutions.Solution1:
@@ -159,6 +181,7 @@ namespace Questions
 
 
 
+
         #endregion
 
 
@@ -180,6 +203,9 @@ namespace Questions
         #region Expert
 
         #endregion
+
+
+
     }
 
 
@@ -191,4 +217,6 @@ namespace Questions
         Solution4 = 4,
         Solution5 = 5
     }
+
+
 }
